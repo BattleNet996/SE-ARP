@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/10 15:44 下午
+@Author  : Tang Jiaxin
+邮箱登录界面，通过邮箱认证登录
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>邮箱登录</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_login.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        form {
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            height: 80%;
+            width: 55%;
+        }
+        h1 {
+            color: white;
+            text-align: center;            
+        }
+        .button {
+            position: absolute;
+            top: 70%;            
+            width: 8%;
+            height: 6%;
+            font: 16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        #send {
+            left: 30%;
+        }
+        #confirm {
+            left: 40%;
+        }
+        #return {
+            left: 50%;
+        }
+        #password {
+            left: 60%;
+        }
+        div {
+            margin-left: 27%;
+        }        
+    </style>
+    <body>
+        <h1>邮件登录</h1>        
+        <form id="mail_login_form" method="POST">
+            <div>
+                <p>请输入用户名或邮箱</p>
+                <input type="text" name="user_name" id="user_name">
+                <br><br><br><br>
+                <p>请输入验证码</p>
+                <input type="text" name="check_code" id="check_code">
+            </div>
+        </form>
+        <input type="button" class="button" id="send"
+        value="发送邮件" onclick="connect_mail_login()">
+        <input type="button" class="button" id="confirm"
+        value="确定" onclick="mail_login()">
+        <input type="button" class="button" id="return" value="返回">
+        <input type="button" class="button" id="password" value="用户名密码登录">       
+    </body>
+    <script>
+        document.getElementById("return").onclick=function() {
+            window.location.assign("entrance.html");
+        }
+        document.getElementById("password").onclick=function() {
+            window.location.assign("login.html");
+        }
+    </script>
+</html>

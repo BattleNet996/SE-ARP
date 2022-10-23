@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/13 12:50 下午
+@Author  : Tang Jiaxin
+文件上传界面，从本地上传文件到服务器
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>文件上传</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_upload.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            height: 100%;
+            width: 40%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        p {
+            color: white;
+            font-size: 20px;
+            font-family: 楷体;
+        }
+        form {
+            position: absolute;
+            left: 15%;
+            top: 30%;
+            height: 30%;
+            width: 80%;
+        }
+        .button {
+            width: 30%;
+            height: 15%;
+            font: 16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        button {
+            position: absolute;
+            left: 40%;
+            top: 80%;
+            width: 20%;
+            height: 6%;
+            font: 16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div>
+            <form enctype="multipart/form-data" id="file_form" method="POST">
+                <p>请选择待上传的文件</p>
+                <input type="file" name="input_file" id="input_file">
+                <br><br><br><br>
+                <input type="button" class="button"
+                value="提交文件" onclick="connect_upload()">
+            </form>
+            <p id="response"></p><br>
+            <button id="return">返回</button>
+        </div>
+    </body>
+    <script>
+        document.getElementById("return").onclick=function() {
+            window.history.back();
+        }
+    </script>
+</html>

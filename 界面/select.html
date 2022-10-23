@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/13 16:31 下午
+@Author  : Tang Jiaxin
+功能选择界面，选择需要使用的功能
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>功能选择</title>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            width: 80%;
+            height: 80%;
+        }
+        .function {
+            width: 15%;
+        }
+        .function:hover {
+            cursor: pointer;
+        }
+        #upload {
+            position: absolute;
+            left: 42%;
+            top: 0px;
+        }
+        #doc {
+            position: absolute;
+            left: 60%;
+            top: 28%;
+        }
+        #merge {
+            position: absolute;
+            left: 24%;
+            top: 28%;
+        }
+        #member {
+            position: absolute;
+            left: 31%;
+            top: 66%;
+        }
+        #files {
+            position: absolute;
+            left: 53%;
+            top: 66%;
+        }
+        .user {
+            position: fixed;
+            left: 90%;
+            top: 10%;
+            width: 5%;
+        }
+        .user:hover {
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <img src="pictures/user.png" class="user" id="user">
+        <div>
+            <img src="pictures/upload.png" class="function" id="upload">
+            <img src="pictures/doc.png" class="function" id="doc">
+            <img src="pictures/merge.png" class="function" id="merge">
+            <img src="pictures/member.png" class="function" id="member">
+            <img src="pictures/files.png" class="function" id="files">
+        </div>
+    </body>
+    <script>
+        document.getElementById("upload").onclick=function() {
+            window.location.assign("upload.html");
+        }
+        document.getElementById("doc").onclick=function() {
+            window.location.assign("documents.html");
+        }
+        document.getElementById("merge").onclick=function() {
+            window.location.assign("merge.html");
+        }
+        document.getElementById("member").onclick=function() {
+            window.location.assign("about.html");
+        }
+        document.getElementById("files").onclick=function() {
+            window.location.assign("files.html");
+        }
+        document.getElementById("user").onclick=function() {
+            window.location.assign("user.html");
+        }
+    </script>
+</html>

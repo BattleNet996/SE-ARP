@@ -1,0 +1,161 @@
+/***********************通用的样式***********************/
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    -webkit-text-size-adjust:100%;
+
+}
+
+
+.btn-register {
+    color: #FFFFFF;
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #FFFFFF;
+    background-color: #086DF2;
+    border-color: #F4F7F7;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register .badge {
+    color: #0AB4F7;
+    background-color: #FFFFFF;
+}
+
+@font-face {
+    font-family: lk;
+    src: url('../fonts/lk.eot') format('embedded-opentype'),
+    url('../fonts/lk.svg') format('svg'),
+    url('../fonts/lk.ttf') format('truetype'),
+    url('../fonts/lk.woff') format('woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+    font-family: lk;
+    font-style: normal;
+}
+
+
+#lk_about, #lk_hot, #lk_link{
+    padding: 20px 0;
+}
+
+#lk_about .title, #lk_hot .title, #lk_link .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+
+
+/***********************通用的样式***********************/
+
+
+/***********************头部的样式***********************/
+#lk_header{
+
+}
+
+
+.icon-phone::before{
+    content: '\e958';
+    font-size: 13px;
+}
+
+.icon-tel::before{
+    content: '\e942';
+    font-size: 13px;
+}
+
+
+#lk_header .navbar-lk{
+    /* background-color: #FFF; */
+    margin-bottom: 0;
+}
+
+#lk_header .navbar-lk .navbar-brand{
+    height: 70px;
+    padding: 10px 15px;
+}
+
+#lk_header .navbar-lk .navbar-nav a{
+    height: 70px;
+    line-height: 40px;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Yahei";
+}
+
+#lk_header .navbar-lk .navbar-nav li.active a,
+#lk_header .navbar-lk .navbar-nav li a:hover{
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+}
+
+#lk_header .navbar-lk .navbar-toggle {
+    margin-top: 18px;
+}
+
+#lk_nav a{
+    color: white;
+}
+
+/***********************头部的样式***********************/
+
+/***********************焦点图的样式***********************/
+#lk_carousel{
+
+}
+
+#lk_carousel .item{
+
+    background: no-repeat center center;
+
+    -webkit-background-size: cover;
+    background-si
+}
+
+@media screen  and ( min-width: 800px){
+    #lk_carousel .item{
+        height: 850px;
+    }
+}
+/***********************焦点图的样式***********************/

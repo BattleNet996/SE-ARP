@@ -1,0 +1,360 @@
+html,body 
+{
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    /* background: #202626; */
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background-image: url(../pictures/bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.block0{
+    margin: 0;
+    padding: 0;
+    height: 3vh;
+    position: relative;
+    /* background-image: url(bg.jpg); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+.block0 .box3{
+    margin-top: 3vh;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.box3 h1{
+    font-size: 3em;
+    color: rgba(255, 255, 255, 1);
+    background-image: url(../imgs/water.png);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    /* 注意添加私有前缀 */
+    -webkit-background-clip: text;
+    font-weight: 800;
+    animation: wave 10s linear infinite;
+}
+.abstract
+{
+    padding: 0;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    text-align: center;
+    height: 1vh;
+}
+.abstract h1 
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.swiper-container 
+{
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+}
+
+.swiper-slide .imgBx
+{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.swiper-slide .imgBx img
+{
+    width: 100%;
+    height: 100%;
+    /* padding-bottom: 100%; */
+    overflow:hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+}
+
+.swiper-slide .details
+{
+    box-sizing: border-box;
+    height:120px;
+    font-size: 10px;
+    padding: 20px;
+    background: white;
+}
+
+.swiper-slide .details h3
+{
+   margin: 0 ;
+   padding: 0;
+   font-size: 20px;
+   text-align: center;
+   line-height: 20px;
+}
+
+.swiper-slide .details h3 span
+{
+    font-size: 16px;
+    color: burlywood;
+}
+
+
+.swiper-slide .details p
+{
+    font-size: 14px;
+    color:gray;
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+}
+
+
+.block{
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    position: relative;
+    /* background-image: url(bg.jpg); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+.box3{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.box3 p{
+    font-size:2em;
+    color: rgba(255, 255, 255, 0.3);
+    background-image: url("../imgs/water.png");
+  
+    background-repeat: round;
+    background-position: bottom;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+    /* 注意添加私有前缀 */
+    -webkit-background-clip: text;
+    font-weight: 500;
+    animation: wave 15s linear infinite;
+}
+@keyframes wave{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 1000px 0;
+    }
+}
+
+body .block2
+{
+    /* position: relative;
+    width: 1080px;
+    height: 100px; */
+    background-color:rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 100%;
+    height: 150px;
+    /* padding-bottom: 0;
+    margin-bottom: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+} 
+.icons{
+    display: inline-flex;
+    position: relative;
+    margin: auto;
+}
+
+.icons a{
+    margin: 0 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+}
+
+.icons a .layer{
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+}
+
+.icons a:hover .layer{
+    transform: rotate(-35deg) skew(20deg);
+}
+
+.icons a .layer span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.icons a .layer span.fab{
+    font-size: 20px;
+    line-height: 55px;
+    text-align: center;
+}
+
+.icons a:hover .layer span:nth-child(1){
+    opacity: 0.2;
+}
+
+.icons a:hover .layer span:nth-child(2){
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}
+
+.icons a:hover .layer span:nth-child(3){
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+}
+
+.icons a:hover .layer span:nth-child(4){
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+}
+
+.icons a:hover .layer span:nth-child(5){
+    opacity: 1;
+    transform: translate(20px, -20px);
+}
+
+.icons a:nth-child(1) .layer span,
+.icons a:nth-child(1) .text{
+    color: #4267B2;
+    border-color: #4267B2;
+}
+
+.icons a:nth-child(2) .layer span,
+.icons a:nth-child(2) .text{
+    color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.icons a:nth-child(3) .layer span,
+.icons a:nth-child(3) .text{
+    color: #E1306C;
+    border-color: #E1306C;
+}
+
+.icons a:nth-child(4) .layer span,
+.icons a:nth-child(4) .text{
+    color: #2867B2;
+    border-color: #2867B2;
+}
+
+.icons a:nth-child(5) .layer span,
+.icons a:nth-child(5) .text{
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.icons a:nth-child(1) .layer span{
+    box-shadow: -1px 1px 3px #4267B2;
+}
+
+.icons a:nth-child(2) .layer span{
+    box-shadow: -1px 1px 3px #1DA1F2;
+}
+
+.icons a:nth-child(3) .layer span{
+    box-shadow: -1px 1px 3px #E1306C;
+}
+
+.icons a:nth-child(4) .layer span{
+    box-shadow: -1px 1px 3px #4267B2;
+}
+
+.icons a:nth-child(5) .layer span{
+    box-shadow: -1px 1px 3px #ff0000;
+}
+
+.icons a .text{
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: bottom .3s ease, opacity .3s ease;
+}
+
+.icons a:hover .text{
+    bottom: -35px;
+    opacity: 1;
+}
+
+@font-face {font-family: "iconfont";
+src: url('iconfont.eot?t=1593756665368'); /* IE9 */
+src: url('iconfont.eot?t=1593756665368#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAWcAAsAAAAACtQAAAVQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqIaIcVATYCJAMUCwwABCAFhG0HUxssCREVpAGS/UywY7oMa60OvwwW6dZkz9Omzft/l5LdCLIQMxoRJaIVJzURaB3uHKmawZkIAXBsrjUr6dK3aVx969qRA6bgvyVAgN7BsdTPBMv7SpfqWFsF4GjAA4pI/NAV8AY0son4FvFMM5+T8DgQAAkxyADVN3bsCTUEiMcRABo/ZtQQqD0BCAlMgtqtirhUAL0CEWq2it0H8LLx8/QN8kgNMIgc4qldRzYMh/nz0i84t/qt6K8hYKwuBoC9CuAAMgAIAE2NTIwHtxoZ4JA+vyfADECCGgzs89LPyz+/8wX3+7+WAbkk6R8eIICBwAFSQXQEItZsFybOqBgcZznxgRHnHSIFAr7gTiwvWrxEAqABaCJANyBSTFBSg4OBSyPQhukkata0atIUlTLOvtu6x7HPtlcaYt9udTk8Nrdk8eqj3kIeFXz9eZywxdsQcuuNRHGrr3G0/WRSz7aHvoQ33mjzenu5pefPe1rDndKQXpbtxyWfzwJT1j8vsdidZVVpnmSBfqrkdkpkdirO22V7L6bRWkXo4LFQT2iXvYlsRqPFbZTcdkWK7d4dtt4bfcQr9rSc8BbvCk3R6zHKHhsNqn1Ba2yWbLNNynbTbV/rXZ/Yk3fUl7/u0Fcr77bDYEjt5VqzWlGccGFHp9VwwFvq2hFaLXk8BlK6DbLL0MvgUgmyo9c5T2PfDVVvR6V17KN2tr393VeN1sMpO84oTl/R8edG97nkvUfJeVmxb81fF9nm6+GVPXutCT+yeZ5bCrYrx5+DtWgM3ObrOXi3PW3ojNW7TcE790ZwW+iIPXcc99JHuVBeG1IfI4mH6K7JIWH+TGCfeRGzswqat3TuHNEcoa7bYg3i5dqwXdP7ZYZ3ZkVtIhv0+ryJbCi9OkLX5XDQQJo/ndqi58BtbP305qYk0yz9IJo/jrpQ1/lj4Yq+tGgs6yrndnyx+LtAf1NfGcj9cSPZhhOYGJdDmGWq5YfPTjnhxKcHw9YG5Ci1sxKJiQwYZtWCtKKGNNrZ0tB32cD/9ZWDu/cYUhnnH8Aftr+FW7O0xJjID6XIXbocXnkYI/JK/MsXmjvuOZeG8NldJ/Ihr4+r69uvfmxqEp+kzB5+fs11HDt8QhM3YvEYS2lf6rMTrL1xw/+dO3/wVY+aTlTuMqP/icG4fISOLbcNN9SOyiBWGZyCsh4trSH1IcqpV5ce7amPvPiWsLT/naXIr4PX3ek4XXjrYqS+/qhKlB17w2vYyN6OIWww672Kjfbceq9DFlH42qdXgxYGXT1VXJP1Fq+rz1mZQ0X5W1nv7taKgN/zSvLIUA7L4j3zSvM98S1RUKhWV6CrVUgQMRsA4H/MD/Mcg32QP+Xdjz7J7/JWAOAX2Rdn9mHYOvXvnwaFVPymli/2be+Yvv0L8/6DAooZTk8nMhvPY2PGdcLXLAZF4b1QMbwni9gKNXBOmE7ZeWdvRof3q3EZMjMBchkcYGiHaOBQw4QUsBkgQkYBqKBGNUhIR9PVMvSYCg4SAgCkYRkAQYNDwBCMS8ChwQOkgH0PRBjxHaigIQ4SLKS/pQzCpTHV1SEJyIGeMDG9CzkcKnP6C2VciXObDdYPnZ/K0Dedv/3EHV0VZ/gkhxAECKc3eMDTcF01GKdnZKFRIZixbUXUmBqmt6xydUgCckBPMDG9C23rUAW+/4UyrsQlLPrR/KHz085Br9FlQD4de6ZFuzLXJzkIWBNAsFP1Bh4Yw1VqaGCiD5qRhYYqUDOjFjcTWR1N865tHRsfoiXFQYgx4iSQSCoU13+cjmnP+UR2FUlpbe2t0euwOHU8QuIyywA=') format('woff2'),
+url('iconfont.woff?t=1593756665368') format('woff'),
+url('iconfont.ttf?t=1593756665368') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+url('iconfont.svg?t=1593756665368#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.block2 .icons .iconfont {
+font-family: "iconfont" !important;
+font-size: 30px;
+line-height: 55px;
+text-align: center;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-z-weixin:before {
+content: "\e6c9";
+}
+
+.icon-dianhua:before {
+content: "\e63b";
+}
+
+.icon-qq-square:before {
+content: "\e703";
+}
+
+.icon-youxiang:before {
+content: "\e639";
+}
+.button {
+    position: absolute;
+    top: 70%;            
+    width: 100%;
+    height: 50%;
+    font: 16px Arial, sans-serif bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    cursor: pointer;
+}

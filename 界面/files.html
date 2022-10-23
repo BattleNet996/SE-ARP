@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/6/1 20:40 下午
+@Author  : Tang Jiaxin
+文件查看界面，查看当前已经上传至服务器的文件
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>文件查看</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_download.js"></script>
+        <script src="connect_remove.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            height: 75%;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+        h1 {
+            text-align: center;
+            color: chartreuse;
+            font-family: 楷体;
+        }
+        button {
+            position: absolute;
+            height: 6%;
+            top: 90%;
+            font:16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius:50px;
+            cursor: pointer;
+        }
+        #button1, #button2 {
+            left: 40%;
+            width: 8%;
+        }
+        #button3, #button4 {
+            left: 55%;
+            width: 6%;
+        }
+        #button2, #button4 {
+            visibility: hidden;
+        }
+        p {
+            position: absolute;
+            left: 10%;
+            top: 20%;
+            color: white;
+            font-size: 20px;
+            font-family: 楷体;
+        }
+        table {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            width: 80%;
+        }
+        th, td {
+            color: white;
+        }
+        th {
+            font-size: 25px;
+            font-family: 楷体;
+        }
+        td {
+            text-align: center;
+        }
+        a {
+            color: white;
+        }
+    </style>
+    <body onload="connect_display_file_list(false)">
+        <h1>当前服务器上的文件列表</h1>
+        <div>
+            <table id="table">
+            </table>
+            <p id="response"></p>
+        </div>
+        <button id="button1" onclick="remove_file()">删除文件</button>
+        <button id="button2" onclick="connect_remove_file()">确认删除</button>
+        <button id="button3">返回</button>
+        <button id="button4" onclick="cancel_remove()">取消</button>
+    </body>
+    <script>
+        document.getElementById("button3").onclick=function() {
+            window.history.back();
+        }
+    </script>
+</html>

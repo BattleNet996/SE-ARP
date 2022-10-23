@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/13 11:44 上午
+@Author  : Tang Jiaxin
+结果展示界面，展示合并结果
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>结果展示</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_download.js"></script>
+        <script src="connect_merge.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            height: 75%;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+        h1 {
+            text-align: center;
+            color: chartreuse;
+            font-family: 楷体;
+        }
+        button, #input1, #input2 {
+            font: 16px Arial,sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius:50px;
+            cursor: pointer;
+        }
+        #input1, #input2 {
+            width: 10%;
+            height: 30%;
+            display: inline;
+        }
+        button {
+            position: absolute;
+            top: 90%;
+            height: 6%;
+        }
+        #button1 {
+            left: 40%;
+            width: 8%;
+        }
+        #button2 {
+            left: 50%;
+            width: 12%;    
+        }
+        #button3 {
+            left: 65%;
+            width: 8%;
+        }
+        #button4 {
+            left: 30%;
+            width: 8%;
+        }
+        p {
+            font-size: 20px;
+            color: white;
+            font-family: 楷体;
+            display: inline;
+        }
+        #response {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+        }
+        form {
+            position: absolute;
+            visibility: hidden;
+            top: 90%;
+            left: 30%;
+            width: 60%;
+            height: 10%;
+        }
+    </style>
+    <body onload="connect_display_file()">
+        <h1>结果展示</h1>
+        <div>
+            <p id="response"></p><br>
+        </div>
+        <button id="button4" onclick="graph_display()">可视化展示</button>
+        <button id="button1" onclick="connect_download_file()">下载结果</button>
+        <button id="button2" onclick="save_result()">保存到服务器</button>
+        <button id="button3" onclick="abort_result()">删除结果</button>
+        <form id="form">
+            <p>请输入希望保存的文件名：</p>
+            <input type="text" name="file_name" id="file_name">
+            <input id="input1" type="button" value="确认" onclick="save()">
+            <input id="input2" type="button" value="取消" onclick="cancel_save()">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/10 9:44 上午
+@Author  : Tang Jiaxin
+登录界面，用户登录
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>用户登录</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_login.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        form {
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            height: 80%;
+            width: 55%;
+        }
+        h1 {
+            color: white;
+            text-align: center;            
+        }
+        .button {
+            position: absolute;
+            top: 70%;            
+            width: 8%;
+            height: 6%;
+            font: 16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        #confirm {
+            left: 30%;
+        }
+        #return {
+            left: 40%;
+        }
+        #mail {
+            left: 50%;
+        }
+        #register {
+            left: 60%;
+        }
+        #user_password {
+            margin-left: 27%;
+        }
+        #check_code_img {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+        }
+        #check_code {
+            position: absolute;
+            left: 10%;
+            top: 35%;
+        }
+    </style>
+    <body onload="connect_check_code()">
+        <h1>用户登录</h1>        
+        <form id="login_form" method="POST">
+            <div id="user_password">
+                <p>请输入用户名</p>
+                <input type="text" name="user_name" id="user_name">
+                <p>请输入密码</p>
+                <input type="password" name="password" id="password">
+            </div>
+            <br><br>
+            <div id="check_code">         
+                <p>请输入验证码</p>
+                <input type="text" name="check_code" id="check_code_input">
+            </div>
+            <div id="check_code_img" onclick="connect_check_code()"></div>
+        </form>
+        <input type="button" class="button" id="confirm"
+        value="确定" onclick="connect_login()">
+        <input type="button" class="button" id="return" value="返回">
+        <input type="button" class="button" id="mail" value="邮箱验证登录">
+        <input type="button" class="button" id="register" value="用户注册">       
+    </body>
+    <script>
+        document.getElementById("return").onclick=function() {
+            window.location.assign("entrance.html");
+        }
+        document.getElementById("mail").onclick=function() {
+            window.location.assign("maillogin.html");
+        }
+        document.getElementById("register").onclick=function() {
+            window.location.assign("register.html");
+        }
+    </script>
+</html>

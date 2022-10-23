@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/9 10:44 上午
+@Author  : Tang Jiaxin
+注册界面，注册一个新用户
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>用户注册</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_login.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        form {
+            position: absolute;
+            left: 45%;
+            top: 20%;
+            height: 80%;
+            width: 55%;
+        }
+        h1 {
+            color: white;
+            text-align: center;            
+        }
+        .button {
+            position: absolute;
+            top: 70%;            
+            width: 8%;
+            height: 6%;
+            font: 16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        #confirm {
+            left: 40%;
+        }
+        #return {
+            left: 52%;
+        }
+    </style>
+    <body>
+        <h1>用户注册</h1>        
+        <form id="register_form" method="POST">
+            <p>请输入用户名</p>
+            <input type="text" name="user_name" id="user_name">
+            <p>请输入密码</p>
+            <input type="password" name="password1" id="password1">
+            <p>请再次输入密码</p>
+            <input type="password" name="password2" id="password2">
+        </form>
+        <input type="button" class="button" id="confirm"
+        value="确定" onclick="connect_register()">
+        <input type="button" class="button" id="return" value="返回">       
+    </body>
+    <script>
+        document.getElementById("return").onclick=function() {
+            window.history.back();
+        }
+    </script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/5/10 17:44 下午
+@Author  : Tang Jiaxin
+初始界面，显示APP的标题和入口
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>APP模型合并</title>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .app_title {
+            color: white;
+            font-size: 50px;
+        }
+        .enter_img {
+            width: 150px;
+            height: 150px;
+        }
+        .enter_img:hover {
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div>
+            <p class="app_title">
+                APP模型合并
+            </p>
+            <img src="pictures/star.png" alt="进入系统" class="enter_img" id="entrance">
+        </div>
+    </body>
+    <script>
+        document.getElementById("entrance").onclick=function() {
+            window.location.assign("login.html");
+        }
+    </script>
+</html>

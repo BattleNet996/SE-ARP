@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/6/2 23:40 下午
+@Author  : Tang Jiaxin
+模型合并界面，选择已经上传至服务器的文件进行合并
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>模型合并</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_download.js"></script>
+        <script src="connect_merge.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            height: 75%;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+        h1 {
+            text-align: center;
+            color: chartreuse;
+            font-family: 楷体;
+        }
+        button {
+            position: absolute;
+            height: 6%;
+            top: 90%;
+            font:16px Arial, sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius:50px;
+            cursor: pointer;
+        }
+        #button1 {
+            left: 40%;
+            width: 8%;
+        }
+        #button2 {
+            left: 55%;
+            width: 6%;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+            font-family: 楷体;
+        }
+        #response {
+            position: absolute;
+            left: 10%;
+            top: 20%;
+        }
+        #merge {
+            position: absolute;
+            left: 47%;
+            top: 88%;
+            visibility: hidden;
+        }
+        table {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            width: 80%;
+        }
+        th, td {
+            color: white;
+        }
+        th {
+            font-size: 25px;
+            font-family: 楷体;
+        }
+        td {
+            text-align: center;
+        }
+        a {
+            color: white;
+        }
+    </style>
+    <body onload="connect_display_file_list(true)">
+        <h1>请选择需要合并的文件</h1>
+        <div>
+            <table id="table">
+            </table>
+            <p id="response"></p>
+        </div>
+        <button id="button1" onclick="connect_merge()">开始合并</button>
+        <button id="button2">返回</button>
+        <p id="merge">正在合并中...</p>
+    </body>
+    <script>
+        document.getElementById("button2").onclick=function() {
+            window.location.assign("select.html");
+        }
+    </script>
+</html>

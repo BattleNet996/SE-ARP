@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+@Time    : 2021/7/13 12:55 下午
+@Author  : Tang Jiaxin
+文件展示界面，展示一个ARP模型文件
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>文件展示</title>
+        <script src="https://ajax.microsoft.com/ajax/jquery/jquery-3.5.1.js"></script>
+        <script src="connect_download.js"></script>
+    </head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background: url(pictures/background.jpg);
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            height: 75%;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+        h1 {
+            text-align: center;
+            color: chartreuse;
+            font-family: 楷体;
+        }
+        button {
+            position: absolute;
+            height: 6%;
+            top: 90%;
+            font:16px Arial,sans-serif bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius:50px;
+            cursor: pointer;
+        }
+        #button1 {
+            left: 35%;
+            width: 8%;
+        }
+        #button2 {
+            left: 46%;
+            width: 10%;
+        }
+        #button3 {
+            left: 60%;
+            width: 6%;
+        }
+        p {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            font-size: 20px;
+            color: white;
+            font-family: 楷体;
+        }
+    </style>
+    <body onload="connect_display_file()">
+        <h1>文件展示</h1>
+        <div>
+            <p id="response"></p><br>
+        </div>
+        <button id="button1" onclick="connect_download_file()">下载文件</button>
+        <button id="button2" onclick="graph_display()">可视化展示</button>
+        <button id="button3">返回</button>
+    </body>
+    <script>
+        document.getElementById("button3").onclick=function() {
+            window.history.back();
+        }        
+    </script>
+</html>
